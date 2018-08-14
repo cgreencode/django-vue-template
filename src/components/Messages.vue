@@ -44,14 +44,11 @@ export default {
     postMessage() {
       const payload = { subject: this.subject, body: this.msgBody };
       this.$backend.$postMessage(payload).then(() => {
-        this.msgBody = ""
-        this.subject = ""
         this.fetchMessages();
       });
     },
-    deleteMsg(msgId) {
-        this.$backend.$deleteMessage(msgId).then(() => {
-            this.messages = this.messages.filter(m => m.pk !== msgId)
+    deleteMsg(msgID) {
+        this.$backend.$deleteMessage(msgID).then(() => {
             this.fetchMessages();
         });
     }
