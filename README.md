@@ -49,7 +49,7 @@ Prefer Flask? Checkout my [gtalarico/flask-vuejs-template](https://github.com/gt
 | `/backend/api`       | Django App (`/api`)                        |
 | `/src`               | Vue App .                                  |
 | `/src/main.js`       | JS Application Entry Point                 |
-| `/public/index.html` | [Html Application Entry Point](https://cli.vuejs.org/guide/html-and-static-assets.html) (`/`)         |
+| `/public/index.html` | Html Application Entry Point (`/`)         |
 | `/public/static`     | Static Assets                              |
 | `/dist/`             | Bundled Assets Output (generated at `yarn build`) |
 
@@ -97,7 +97,7 @@ Proxy config in [`vue.config.js`](/vue.config.js) is used to route the requests
 back to django's API on port 8000.
 
 If you would rather run a single dev server, you can run Django's
-development server only on `:8000`, but you have to build build the Vue app first
+development server only on `:8000`, and you have to build the Vue app first
 and the page will not reload on changes.
 
 ```
